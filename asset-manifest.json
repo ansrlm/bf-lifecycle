@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/bf-lifecycle/static/js/main.a8030a92.chunk.js",
+    "main.js.map": "/bf-lifecycle/static/js/main.a8030a92.chunk.js.map",
+    "runtime-main.js": "/bf-lifecycle/static/js/runtime-main.8a3daba3.js",
+    "runtime-main.js.map": "/bf-lifecycle/static/js/runtime-main.8a3daba3.js.map",
+    "index.html": "/bf-lifecycle/index.html",
+    "precache-manifest.1c8b198a96b43fc1dbb5838931723e4a.js": "/bf-lifecycle/precache-manifest.1c8b198a96b43fc1dbb5838931723e4a.js",
+    "service-worker.js": "/bf-lifecycle/service-worker.js"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a3daba3.js",
+    "static/js/main.a8030a92.chunk.js"
+  ]
+}
