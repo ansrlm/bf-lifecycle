@@ -1,10 +1,9 @@
 {
   "name": "bf-lifecycle",
-  "version": "1.0.0",
-  "description": "a class trigger callback functions by history traversal",
+  "version": "1.0.1",
+  "description": "a class can trigger callback functions by history traversal",
   "author": "ansrlm",
   "license": "MIT",
-  "repository": "ansrlm/bf-lifecycle",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -20,6 +19,20 @@
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansrlm/bf-lifecycle.git"
+  },
+  "keywords": [
+    "bfcache",
+    "lifecycle",
+    "back_forward",
+    "window.performance.navigation.type"
+  ],
+  "bugs": {
+    "url": "https://github.com/ansrlm/bf-lifecycle/issues"
+  },
+  "homepage": "https://ansrlm.github.io/bf-lifecycle",
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.9.0"
