@@ -1,0 +1,8 @@
+{
+  "short_name": "bf-lifecycle",
+  "name": "bf-lifecycle",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
