@@ -5,10 +5,14 @@ A class helps to trigger callback functions by history traversal
 [![NPM](https://img.shields.io/npm/v/bf-lifecycle.svg)](https://www.npmjs.com/package/bf-lifecycle) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Examples of technology application
-- Google
-![example1](https://user-images.githubusercontent.com/28749913/157390526-95f069e4-e7d0-4df8-86e5-2095e8d2f541.gif)
-- Naver
-![example2](https://user-images.githubusercontent.com/28749913/157390565-433da026-29da-4041-8d48-43ca4ddc2bdf.gif)
+<ul dir="auto">
+<li>Google</li>
+	
+</br>![example1](https://user-images.githubusercontent.com/28749913/157390526-95f069e4-e7d0-4df8-86e5-2095e8d2f541.gif)
+<li>Naver</li>
+
+</br>![example2](https://user-images.githubusercontent.com/28749913/157390565-433da026-29da-4041-8d48-43ca4ddc2bdf.gif)
+</ul>
 
 ## Install
 
