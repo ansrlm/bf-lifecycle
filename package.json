@@ -1,7 +1,7 @@
 {
   "name": "bf-lifecycle",
-  "version": "1.0.1",
-  "description": "a class can trigger callback functions by history traversal",
+  "version": "1.0.3",
+  "description": "a class helps to trigger callback functions by history traversal",
   "author": "ansrlm",
   "license": "MIT",
   "main": "dist/index.js",

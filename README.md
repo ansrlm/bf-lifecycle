@@ -1,6 +1,6 @@
 # bf-lifecycle
 
-> a class trigger callback functions by history traversal
+A class helps to trigger callback functions by history traversal
 
 [![NPM](https://img.shields.io/npm/v/bf-lifecycle.svg)](https://www.npmjs.com/package/bf-lifecycle) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -38,7 +38,7 @@ bfLifecycle.mount();
 
 ## Demo
 
-[Here](https://ansrlm.github.io/bf-lifecycle) is the demo of infinitescroll
+[Here](https://ansrlm.github.io/bf-lifecycle) is the demo of bf-lifecycle
 
 ```html
 <a href="ansrlm.github.io/bf-lifecycle" />
