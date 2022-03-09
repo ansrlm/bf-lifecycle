@@ -6,9 +6,9 @@ A class helps to trigger callback functions by history traversal
 
 ## Examples of technology application
 - Google
-![interactiveUI1](https://user-images.githubusercontent.com/28749913/157387657-52c74a9b-4268-47b0-90c0-9670f1a122bd.gif)
+![example1](https://user-images.githubusercontent.com/28749913/157390526-95f069e4-e7d0-4df8-86e5-2095e8d2f541.gif)
 - Naver
-![interactiveUI2](https://user-images.githubusercontent.com/28749913/157387683-1e9f95b3-cbee-4c8d-9f1c-d880921e1e31.gif)
+![example2](https://user-images.githubusercontent.com/28749913/157390565-433da026-29da-4041-8d48-43ca4ddc2bdf.gif)
 
 ## Install
 
