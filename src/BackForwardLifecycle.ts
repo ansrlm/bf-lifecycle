@@ -1,7 +1,7 @@
 interface Props {
   callback?: () => void;
-  storeStatus?: () => void;
-  restoreStatus?: () => object | undefined | null | false;
+  storeState?: () => void;
+  restoreState?: () => object | undefined | null | false;
   options?: {
     hasDependency?: boolean;
     withClearScrollWillNotStoreCache?: boolean;
@@ -11,8 +11,8 @@ interface Props {
 class BackForwardLifecycle {
   /**
    * @param callback: callback function after restoring from the cases - bfcache or session storage
-   * @param storeStatus: hook to store data to session
-   * @param restoreStatus: hook to restore data from session
+   * @param storeState: hook to store data to session
+   * @param restoreState: hook to restore data from session
    * @param options.hasDependency: additional checker for triggering callback - success to restore data from session or not
    * @param options.withClearScrollWillNotStoreCache: function to clear scroll position before hide cycle for the case - will not store bfcache
    */
@@ -28,7 +28,7 @@ class BackForwardLifecycle {
       e.persisted && this.props.callback && this.props.callback();
     };
     this.handlePageHide = (e: PageTransitionEvent) => {
-      this.props.storeStatus && this.props.storeStatus();
+      this.props.storeState && this.props.storeState();
       !e.persisted &&
         this.props.options &&
         this.props.options.withClearScrollWillNotStoreCache &&
@@ -42,7 +42,7 @@ class BackForwardLifecycle {
     window.addEventListener("pagehide", this.handlePageHide);
   };
 
-  private checkBackForward = (): boolean =>
+  private isBackForward = (): boolean =>
     window.performance.navigation.type ===
       window.performance.navigation.TYPE_BACK_FORWARD ||
     window.performance
@@ -51,14 +51,14 @@ class BackForwardLifecycle {
       .includes("back_forward");
 
   public triggerStoreStatus = (): void => {
-    this.props.storeStatus && this.props.storeStatus();
+    this.props.storeState && this.props.storeState();
   };
 
   public triggerRestoreStatus = (): object | string | false => {
     const data =
-      (this.checkBackForward() &&
-        this.props.restoreStatus &&
-        this.props.restoreStatus()) ||
+      (this.isBackForward() &&
+        this.props.restoreState &&
+        this.props.restoreState()) ||
       false;
 
     this.isSuccess = !!data;
@@ -74,7 +74,7 @@ class BackForwardLifecycle {
     );
 
   public triggerCallback = (): void => {
-    this.checkBackForward() &&
+    this.isBackForward() &&
       this.isValid() &&
       this.props.callback &&
       this.props.callback();
