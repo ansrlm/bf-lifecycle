@@ -20,21 +20,21 @@ npm install --save bf-lifecycle
 import BackForwardLifecycle from 'bf-lifecycle';
 
 const bfLifecycle = new BackForwardLifecycle({
-	callback: () => {
-		// callback function after restoring from the cases - bfcache or session storage
-	},
-	storeState: () => {
-		// hook to store
-	},
-	restoreState: () => {
-		let data;
-		// hook to restore
-		return data;
-	},
-	options: {
-		hasDependency: true, // strict checker: did session.getItem go well?
-		withClearScrollWillNotStoreBfCache: true, // clear scroll: includes reloading page
-	},
+   callback: () => {
+      // callback function after restoring from the cases - bfcache or session storage
+   },
+   storeState: () => {
+      // hook to store
+   },
+   restoreState: () => {
+      let data;
+      // hook to restore
+      return data;
+   },
+   options: {
+      hasDependency: true, // strict checker: did session.getItem go well?
+      withClearScrollWillNotStoreBfCache: true, // clear scroll: includes reloading page
+   },
 });
 
 bfLifecycle.mount();
