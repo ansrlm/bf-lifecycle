@@ -1,6 +1,6 @@
 {
   "name": "bf-lifecycle",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a class helps to trigger callback functions by history traversal",
   "author": "ansrlm",
   "license": "MIT",

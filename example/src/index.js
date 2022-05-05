@@ -1,17 +1,17 @@
 import BackForwardLifecycle from "bf-lifecycle";
 
-const pageStatusElement = document.getElementById("demo");
+const pageStateElement = document.getElementById("demo");
 
-pageStatusElement.innerHTML = "initial";
+pageStateElement.innerHTML = "initial";
 
 const bfLifecycle = new BackForwardLifecycle({
   callback: () => {
-    pageStatusElement.innerHTML = "back_forward_from_bfcache";
+    pageStateElement.innerHTML = "back_forward_from_bfcache";
   },
-  storeStatus: () => {
+  storeState: () => {
     sessionStorage.setItem("bf-lifecycle-example-data", "back_forward");
   },
-  restoreStatus: () => {
+  restoreState: () => {
     const data = sessionStorage.getItem("bf-lifecycle-example-data");
     sessionStorage.removeItem("bf-lifecycle-example-data");
     return data;
@@ -24,6 +24,6 @@ const bfLifecycle = new BackForwardLifecycle({
 
 bfLifecycle.mount();
 
-const data = bfLifecycle.triggerRestoreStatus();
+const data = bfLifecycle.triggerRestoreState();
 
-if (data) pageStatusElement.innerHTML = data;
+if (data) pageStateElement.innerHTML = data;

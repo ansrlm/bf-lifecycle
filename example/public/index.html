@@ -7,6 +7,7 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/index.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai-sublime.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <style>pre{margin:0px;}</style>
@@ -15,7 +16,7 @@
   <body>
     <div id="root">
       <b class="title">DEMO</b>
-      <legend>[Page Status]</legend>
+      <legend>[Page State]</legend>
       <div id="demo" class="demo">initial</div>
       <span>Link to another page: </span><a href="https://m.naver.com">m.naver.com</a>
       <hr>
@@ -23,18 +24,18 @@
         <b class="title">JS</b>
         <pre id="code_1643787203450" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code class="hljs"><span class="hljs-keyword">import</span> BackForwardLifecycle <span class="hljs-keyword">from</span> <span class="hljs-string">"bf-lifecycle"</span>;
 
-<span class="hljs-keyword">const</span> pageStatusElement = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"demo"</span>);
+<span class="hljs-keyword">const</span> pageStateElement = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"demo"</span>);
 
-pageStatusElement.innerHTML = <span class="hljs-string">"initial"</span>;
+pageStateElement.innerHTML = <span class="hljs-string">"initial"</span>;
 
 <span class="hljs-keyword">const</span> bfLifecycle = <span class="hljs-keyword">new</span> BackForwardLifecycle({
   <span class="hljs-attr">callback</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    pageStatusElement.innerHTML = <span class="hljs-string">"back_forward_from_bfcache"</span>;
+    pageStateElement.innerHTML = <span class="hljs-string">"back_forward_from_bfcache"</span>;
   },
-  <span class="hljs-attr">storeStatus</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-attr">storeState</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
     sessionStorage.setItem(<span class="hljs-string">"bf-lifecycle-example-data"</span>, <span class="hljs-string">"back_forward"</span>);
   },
-  <span class="hljs-attr">restoreStatus</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-attr">restoreState</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
     <span class="hljs-keyword">const</span> data = sessionStorage.getItem(<span class="hljs-string">"bf-lifecycle-example-data"</span>);
     sessionStorage.removeItem(<span class="hljs-string">"bf-lifecycle-example-data"</span>);
     <span class="hljs-keyword">return</span> data;
@@ -47,9 +48,9 @@ pageStatusElement.innerHTML = <span class="hljs-string">"initial"</span>;
 
 bfLifecycle.mount();
 
-<span class="hljs-keyword">const</span> data = bfLifecycle.triggerRestoreStatus();
+<span class="hljs-keyword">const</span> data = bfLifecycle.triggerRestoreState();
 
-<span class="hljs-keyword">if</span> (data) pageStatusElement.innerHTML = data;</code></pre>
+<span class="hljs-keyword">if</span> (data) pageStateElement.innerHTML = data;</code></pre>
       </div>
     </div>
   </body>

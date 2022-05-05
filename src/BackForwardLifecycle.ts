@@ -24,10 +24,10 @@ class BackForwardLifecycle {
 
   constructor(props: Props) {
     this.props = props;
-    this.handlePageShow = (e: PageTransitionEvent) => {
+    this.handlePageShow = (e: PageTransitionEvent): void => {
       e.persisted && this.props.callback && this.props.callback();
     };
-    this.handlePageHide = (e: PageTransitionEvent) => {
+    this.handlePageHide = (e: PageTransitionEvent): void => {
       this.props.storeState && this.props.storeState();
       !e.persisted &&
         this.props.options &&
@@ -50,11 +50,11 @@ class BackForwardLifecycle {
       .map((navigation) => (navigation as PerformanceNavigationTiming).type)
       .includes("back_forward");
 
-  public triggerStoreStatus = (): void => {
+  public triggerStoreState = (): void => {
     this.props.storeState && this.props.storeState();
   };
 
-  public triggerRestoreStatus = (): object | string | false => {
+  public triggerRestoreState = (): object | string | false => {
     const data =
       (this.isBackForward() &&
         this.props.restoreState &&
