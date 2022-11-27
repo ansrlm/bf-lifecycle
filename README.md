@@ -4,9 +4,10 @@ A class helps to trigger callback functions by history traversal
 
 [![NPM](https://img.shields.io/npm/v/bf-lifecycle.svg)](https://www.npmjs.com/package/bf-lifecycle) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Examples of technology application (not 100% identical)
+## Examples of technology application
 	
-![example1](https://user-images.githubusercontent.com/28749913/157390526-95f069e4-e7d0-4df8-86e5-2095e8d2f541.gif)
+![example1](https://user-images.githubusercontent.com/28749913/204125500-3e74f3f5-1921-4b67-94ec-318b4044b0ba.gif)
+![example2](https://user-images.githubusercontent.com/28749913/204125503-12373ed6-004c-48d0-8c24-eda260360770.gif)
 
 ## Install
 
