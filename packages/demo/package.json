@@ -1,20 +1,23 @@
 {
-  "name": "bf-lifecycle-example",
+  "name": "bf-lifecycle-demo",
   "homepage": "https://ansrlm.github.io/bf-lifecycle",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "react": "file:../node_modules/react",
+    "react": "^16.14.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "^3.0.1",
-    "bf-lifecycle": "file:.."
+    "react-scripts": "^5.0.1",
+    "bf-lifecycle": "1.0.0",
+    "gh-pages": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm install && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",

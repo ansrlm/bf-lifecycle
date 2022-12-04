@@ -20,7 +20,7 @@ class BackForwardLifecycle {
   private props: Props;
   private handlePageShow: (e: PageTransitionEvent) => void;
   private handlePageHide: (e: PageTransitionEvent) => void;
-  private isSuccess: boolean;
+  private _isSuccess: boolean;
 
   constructor(props: Props) {
     this.props = props;
@@ -34,7 +34,7 @@ class BackForwardLifecycle {
         this.props.options.withClearScrollWillNotStoreCache &&
         window.scrollTo(0, 0);
     };
-    this.isSuccess = false;
+    this._isSuccess = false;
   }
 
   public mount = (): void => {
@@ -61,7 +61,7 @@ class BackForwardLifecycle {
         this.props.restoreState()) ||
       false;
 
-    this.isSuccess = !!data;
+    this._isSuccess = !!data;
 
     return data;
   };
@@ -70,7 +70,7 @@ class BackForwardLifecycle {
     !(
       this.props.options &&
       this.props.options.hasDependency &&
-      !this.isSuccess
+      !this._isSuccess
     );
 
   public triggerCallback = (): void => {
@@ -83,7 +83,7 @@ class BackForwardLifecycle {
   public unmount = (): void => {
     window.removeEventListener("pageshow", this.handlePageShow);
     window.removeEventListener("pagehide", this.handlePageHide);
-    this.isSuccess = false;
+    this._isSuccess = false;
   };
 }
 

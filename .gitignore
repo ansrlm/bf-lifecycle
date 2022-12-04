@@ -4,9 +4,6 @@
 # dependencies
 node_modules
 
-# packages
-package-lock.json
-
 # builds
 build
 dist

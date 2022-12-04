@@ -1,0 +1,49 @@
+{
+  "name": "bf-lifecycle",
+  "version": "1.0.6",
+  "description": "A class helps to trigger callback functions by history traversal",
+  "author": "ansrlm",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=8"
+  },
+  "scripts": {
+    "start": "rollup -c -w",
+    "build": "rollup -c && tsc -d --emitDeclarationOnly --noEmit false --declarationDir dist",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansrlm/bf-lifecycle.git"
+  },
+  "keywords": [
+    "bfcache",
+    "lifecycle",
+    "back_forward",
+    "window.performance.navigation.type"
+  ],
+  "bugs": {
+    "url": "https://github.com/ansrlm/bf-lifecycle/issues"
+  },
+  "homepage": "https://ansrlm.github.io/bf-lifecycle",
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/runtime": "^7.3.1",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@rollup/plugin-url": "^5.0.1",
+    "rollup": "^2.26.9",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.9.0"
+  }
+}
