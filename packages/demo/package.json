@@ -8,7 +8,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.9.0",
     "react-scripts": "^5.0.1",
-    "bf-lifecycle": "1.0.0",
+    "bf-lifecycle": "1.0.6",
     "gh-pages": "^2.0.1"
   },
   "scripts": {
