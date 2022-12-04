@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/bf-lifecycle-demo/manifest.json"><link rel="stylesheet" href="/bf-lifecycle-demo/index.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai-sublime.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script>hljs.initHighlightingOnLoad()</script><style>pre{margin:0}</style><title>bf-lifecycle</title><script defer="defer" src="/bf-lifecycle-demo/static/js/main.47753a09.js"></script></head><body><div id="root"><b class="title">DEMO</b><legend>[Page State]</legend><div id="demo" class="demo">initial</div><span>Link to another page: </span><a href="https://m.naver.com">m.naver.com</a><hr><div class="discription"><b class="title">JS</b><pre id="code_1643787203450" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code class="hljs"><span class="hljs-keyword">import</span> BackForwardLifecycle <span class="hljs-keyword">from</span> <span class="hljs-string">"bf-lifecycle"</span>;
+
+<span class="hljs-keyword">const</span> pageStateElement = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"demo"</span>);
+
+pageStateElement.innerHTML = <span class="hljs-string">"initial"</span>;
+
+<span class="hljs-keyword">const</span> bfLifecycle = <span class="hljs-keyword">new</span> BackForwardLifecycle({
+  <span class="hljs-attr">callback</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    pageStateElement.innerHTML = <span class="hljs-string">"back_forward_from_bfcache"</span>;
+  },
+  <span class="hljs-attr">storeState</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    sessionStorage.setItem(<span class="hljs-string">"bf-lifecycle-example-data"</span>, <span class="hljs-string">"back_forward"</span>);
+  },
+  <span class="hljs-attr">restoreState</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> data = sessionStorage.getItem(<span class="hljs-string">"bf-lifecycle-example-data"</span>);
+    sessionStorage.removeItem(<span class="hljs-string">"bf-lifecycle-example-data"</span>);
+    <span class="hljs-keyword">return</span> data;
+  },
+  <span class="hljs-attr">options</span>: {
+    <span class="hljs-attr">hasDependency</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">withClearScrollWillNotStoreBfCache</span>: <span class="hljs-literal">true</span>,
+  },
+});
+
+bfLifecycle.mount();
+
+<span class="hljs-keyword">const</span> data = bfLifecycle.triggerRestoreState();
+
+<span class="hljs-keyword">if</span> (data) pageStateElement.innerHTML = data;</code></pre></div></div></body></html>
