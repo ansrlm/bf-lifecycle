@@ -1,8 +1,13 @@
 {
   "short_name": "bf-lifecycle",
   "name": "bf-lifecycle",
-  "start_url": "./index.html",
+  "start_url": "/index.html",
+  "scope": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "icons": {
+    "src": "/bf-lifecycle.svg",
+    "sizes": "any"
+  }
 }
