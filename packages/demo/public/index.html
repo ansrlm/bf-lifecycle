@@ -2,27 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/android-chrome-512x512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/index.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai-sublime.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <style>pre{margin:0px;}</style>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <style>
+      pre {
+        margin: 0px;
+      }
+    </style>
     <title>bf-lifecycle</title>
   </head>
   <body>
-    <div id="root">
-      <b class="title">DEMO</b>
+    <div id="root"><b class="title">DEMO</b>
       <legend>[Page State]</legend>
-      <div id="demo" class="demo">initial</div>
-      <span>Link to another page: </span><a href="https://m.naver.com">m.naver.com</a>
+      <div id="demo" class="demo">initial</div><span>Link to another page: </span><a href="https://m.naver.com">m.naver.com</a>
       <hr>
-      <div class="discription">
-        <b class="title">JS</b>
-        <pre id="code_1643787203450" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code class="hljs"><span class="hljs-keyword">import</span> BackForwardLifecycle <span class="hljs-keyword">from</span> <span class="hljs-string">"bf-lifecycle"</span>;
+      <div class="discription"><b class="title">JS</b>
+        <pre id="code_1643787203450" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code class="hljs"><span class="hljs-keyword">import</span> BackForwardLifecycle <span class="hljs-keyword">from</span><span class="hljs-string">"bf-lifecycle"</span>;
 
 <span class="hljs-keyword">const</span> pageStateElement = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"demo"</span>);
 
